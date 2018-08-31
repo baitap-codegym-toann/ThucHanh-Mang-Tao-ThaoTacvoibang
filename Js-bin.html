@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mảng</title>
+</head>
+<body>
+<form>
+    <label for="input">Nhập:</label><input id="input" type="text">
+    <button type="button" id="add" onclick="addd()">Add</button>
+    <button type="button" id="get" onclick="gett()">Submit</button>
+</form>
+</body>
+<script>
+    let array = [];
+
+    function addd() {
+        array.push(document.getElementById("input").value);
+        document.getElementById("input").innerText = "";
+    }
+
+    function gett() {
+        for (i = 0; i < array.length; i++) {
+            document.write(array[i]+"\n" );
+        }
+    }
+</script>
+</html>
